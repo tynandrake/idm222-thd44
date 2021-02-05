@@ -434,6 +434,7 @@ ul {
         width: 100%;
         align-items: center;
         border: 2px solid green;
+        margin-bottom: 4rem;
     }
     .proj-thumb img{
         border: 2px solid pink;
@@ -451,7 +452,16 @@ ul {
         order: 1;
         justify-content: center;
     }
-    
+
+    /* Project/Resume/About Page Adjustments */
+    .proj-fwh , .resume-fwh {
+        max-width: 800px;
+    }
+    #about-portrait {
+        float: right;
+        margin-top: 3rem;
+        width: 20rem;
+    }   
 }
 
 
