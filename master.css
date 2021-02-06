@@ -18,6 +18,11 @@ h1.name{
     margin-top: 6rem;
     margin-bottom: 2rem;   
 }
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
 
 /* Navbar */
 .navbar {
@@ -354,8 +359,6 @@ ul {
 .myButton {
 	background-color: #4E00FD;
 	border-radius:28px;
-	border: none;
-	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
@@ -388,13 +391,18 @@ ul {
 }
 
 @media (min-width: 992px) {
+    /* Navbar */
+
     .navbar {
         padding-left: 15rem;
         padding-right: 15rem;
     }
+    /* Main Elements */
+    #fwh-gradient{
+        background: #ffffff;
+    }
     .fwh-container {
-        justify-content: center;
-        
+        justify-content: center;   
     }
     .fwh {
         display: flex;
@@ -425,35 +433,106 @@ ul {
         border-radius: 1rem;
         top: 30vh;
     }
+    /* My Work Section */
+
+    /* General Card Styling */
     .fwh-work {
         width: 75rem;
     }
     .proj {
+        border-radius: 2rem;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        align-items: center;
-        border: 2px solid green;
-        margin-bottom: 4rem;
+        max-height: 600px;
+        grid-column-gap: 24px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(13, minmax(0, 1fr));
+        overflow: hidden;
+        /* border: 2px solid green; */
+        margin-bottom: 3rem;
     }
-    .proj-thumb img{
-        border: 2px solid pink;
-        width: 35rem;
+    .proj-title {
+        grid-column: 2 / span 4;
+        grid-row: 3;
     }
     .work-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin: 0;
+        text-align: left;
+    } 
+    .proj-thumb {
+        grid-column: 8;
+        grid-row: 3;
     }
-    #thumb-two {
-        display: flex;
-        order: 2;
+    .proj-thumb img{
+        /* border: 2px solid pink; */
+        width: 35rem;
+    } 
+    .proj-description {
+        color: white;
+        grid-column: 2 / span 4;
+        grid-row: 5;
+        margin-top: 2rem;
     }
-    #title-two {
-        display: flex;
-        order: 1;
-        justify-content: center;
+    .proj-description p {
+        font-size: 1.5rem; 
+    }
+    .proj-button {
+        grid-column: 2 / span 2;
+        grid-row: 11;
+    }
+    .proj-button a {
+        background-color: #4366a5d0;
+        border: 2px solid white;
+        padding: 0.5rem 1rem;
+    }
+    /* Project One */
+    #proj-one {
+        background: linear-gradient(to right top, #194189 0%, #3B4980 25%, #8738A7 100%);
+    }
+    #proj-one-title {
+        color: #C48CFC;
+    }
+    /* Project Two */
+    #proj-two {
+        background-image: url(images/proj-two-bg.jpg);
+    }
+    #proj-two-title {
+        grid-column: 8 / span 4;
+        grid-row: 3;
+    }
+    #proj-two-thumb {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #proj-two-description {
+        grid-column: 8 / span 4;
+        grid-row: 5;
+    }
+    #proj-two-button {
+        grid-column: 10 / span 2;
+        grid-row: 11;
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+    }
+    #proj-two-button a{
+        background: #fb5851;
+    }
+    /* Project Three */
+    #proj-three {
+        background-image: url(images/proj-three-bg-1.jpg);
+        background-size: cover;
+    }
+    #proj-three-title {
+        color: #869fced0 ;
+    }
+    #proj-three-button a{
+        background: #2ea1d6;
     }
 
+    
+
     /* Project/Resume/About Page Adjustments */
+
     .proj-fwh , .resume-fwh {
         max-width: 800px;
     }
@@ -502,5 +581,11 @@ ul {
         right: 1.5rem;
         float: right;
         direction: rtl;
+    }
+    .proj-description {
+        display: none;
+    }
+    .proj-button {
+        display: none;
     }
 }
