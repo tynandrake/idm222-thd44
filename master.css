@@ -23,6 +23,10 @@ button {
     border: none;
     background: none;
 }
+a:hover {
+    color: #4E00FD;
+    transition: all .5s ease-in-out;
+}
 
 /* Navbar */
 .navbar {
@@ -364,6 +368,9 @@ ul {
 	font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
     padding: 0.75rem 1rem;
 }
+.myButton:hover {
+    filter: invert()
+}
 
 
 
@@ -531,7 +538,7 @@ ul {
     }
     /* Project Two */
     #proj-two {
-        background-image: url(images/proj-two-bg.jpg);
+        background-image: url(images/homepage/proj-two-bg.jpg);
     }
     #proj-two-title {
         grid-column: 8 / span 4;
@@ -555,7 +562,7 @@ ul {
     }
     /* Project Three */
     #proj-three {
-        background-image: url(images/proj-three-bg-1.jpg);
+        background-image: url(images/homepage/proj-three-bg-1.jpg);
         background-size: cover;
     }
     #proj-three-title {
