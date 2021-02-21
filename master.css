@@ -573,7 +573,10 @@ ul {
     }
 
     /* Project/Resume/About Page Adjustments */
-
+    .proj-fwh h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
     .proj-fwh , .resume-fwh {
         max-width: 900px;
     }

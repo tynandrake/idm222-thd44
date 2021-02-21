@@ -40,7 +40,11 @@
                 </p>
             </div>
             <div class="hp-portrait">
-                <img src="images/homepage/headshot.png" alt="headshot">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="images/homepage/headshot-large.jpg">
+                    <source media="(min-width: 450px)" srcset="images/homepage/headshot.png">     
+                    <img src="images/homepage/headshot.png" alt="headshot">    
+                </picture>
             </div>
             <div class="my_work">
                 <h5>My Work</h5>
