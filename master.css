@@ -120,7 +120,6 @@ a:active {
     text-decoration: underline;
 }
 img.rounded {
-    border-radius: 1rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -400,12 +399,111 @@ ul {
 
 
 
+/* Media query - mobile */
+@media (max-width: 719px) {
+    .menu-btn {
+        display: flex;
+    }
+    .nav-menu {
+        font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular'; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(100vw);
+        background-color: #4E00FD;
+        transition: transform 0.3s ease-in-out;
+    }
+    .nav-menu li {
+        display: flex;
+        margin-top: 1rem;
+    }
+    .nav-menu a {
+        color: #F2F3F2;
+        font-size: 2.25rem;
+    }
+    .nav-menu.open {
+        transform: translateX(0);
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 60vh;
+        right: 1.5rem;
+        float: right;
+        direction: rtl;
+    }
+    img.rounded {
+        border-radius: 1rem;
+    }
+    .proj-description {
+        display: none;
+    }
+    .proj-button {
+        display: none;
+    }
+}
 
 
+/* Media query - tablet */
+@media (min-width: 720px) {
+    .menu-btn {
+        display: flex;
+    }
+    .nav-menu {
+        font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular'; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(100vw);
+        background-color: #4E00FD;
+        transition: transform 0.3s ease-in-out;
+    }
+    .nav-menu li {
+        display: flex;
+        margin-top: 1rem;
+    }
+    .nav-menu a {
+        color: #F2F3F2;
+        font-size: 2.25rem;
+    }
+    .nav-menu.open {
+        transform: translateX(0);
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 60vh;
+        right: 1.5rem;
+        float: right;
+        direction: rtl;
+    }
+    .fwh {
+        max-width: 700px;
+    }
+    .fwh h4 {
+        font-size: 1.2rem;
+    }
+    #hp-name {
+        font-size: 10rem;
+        line-height: 8rem;
+    }
+    #tagline-description {
+        font-size: 1.75rem;
+    }
 
-
-
-
+    .proj-description {
+        display: none;
+    }
+    .proj-button {
+        display: none;
+    }
+}
 
 
 /* Media query - desktop */
@@ -512,6 +610,7 @@ ul {
         width: 40rem;
     } 
     .proj-description {
+        display: grid;
         color: white;
         grid-column: 2 / span 4;
         grid-row: 5;
@@ -585,116 +684,4 @@ ul {
         margin-top: 3rem;
         width: 20rem;
     }   
-}
-
-
-
-
-
-
-
-/* Media query - tablet */
-@media (max-width: 992px) {
-    .menu-btn {
-        display: flex;
-    }
-    .nav-menu {
-        font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular'; 
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 100vh;
-        transform: translateX(100vw);
-        background-color: #4E00FD;
-        transition: transform 0.3s ease-in-out;
-    }
-    .nav-menu li {
-        display: flex;
-        margin-top: 1rem;
-    }
-    .nav-menu a {
-        color: #F2F3F2;
-        font-size: 2.25rem;
-    }
-    .nav-menu.open {
-        transform: translateX(0);
-    }
-    .menu-items {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 60vh;
-        right: 1.5rem;
-        float: right;
-        direction: rtl;
-    }
-    .fwh {
-        max-width: 800px;
-    }
-    .fwh h4 {
-        font-size: 1.2rem;
-    }
-    #hp-name {
-        font-size: 6rem;
-    }
-    #tagline-description {
-        font-size: 1.75rem;
-    }
-
-    .proj-description {
-        display: none;
-    }
-    .proj-button {
-        display: none;
-    }
-}
-
-
-
-
-
-
-/* Media query - mobile */
-@media (max-width: 719px) {
-    .menu-btn {
-        display: flex;
-    }
-    .nav-menu {
-        font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular'; 
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 100vh;
-        transform: translateX(100vw);
-        background-color: #4E00FD;
-        transition: transform 0.3s ease-in-out;
-    }
-    .nav-menu li {
-        display: flex;
-        margin-top: 1rem;
-    }
-    .nav-menu a {
-        color: #F2F3F2;
-        font-size: 2.25rem;
-    }
-    .nav-menu.open {
-        transform: translateX(0);
-    }
-    .menu-items {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 60vh;
-        right: 1.5rem;
-        float: right;
-        direction: rtl;
-    }
-    .proj-description {
-        display: none;
-    }
-    .proj-button {
-        display: none;
-    }
 }
