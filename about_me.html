@@ -38,7 +38,11 @@
             I am currently growing a personal graphic-design based Instagram page that has grown to over two thousand 
             followers in the past year. 
         </p>
-        <img src="images/headshot.jpg" alt="profile picture headshot" class="rounded" id="about-portrait">
+        <picture>
+            <source media="(min-width: 800px)" srcset="images/about/about_headshot-large.jpg">
+            <source media="(min-width: 450px)" srcset="images/about/about_headshot.jpg">       
+            <img src="images/about/about_headshot.jpg" alt="profile picture headshot" class="rounded" id="about-portrait">
+        </picture>
         <div class="skills">
             <h2 id="secondary-heading">My Skills</h2>
             <ul>

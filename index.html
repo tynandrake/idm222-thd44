@@ -61,7 +61,11 @@
                 <div class="proj" id="proj-one">
                         <div class="proj-thumb">
                             <a href="proj_one.html">
-                                <img srcset="images/homepage/proj1-thumb.jpg 1200w, images/proj1-thumb-2.jpg 600w" sizes="(max-width: 600px) 600px, 100vw" class="rounded">
+                                <picture>
+                                    <source media="(min-width: 800px)" srcset="images/homepage/proj1-thumb-large.jpg">
+                                    <source media="(min-width: 450px)" srcset="images/homepage/proj1-thumb.jpg">       
+                                    <img srcset="images/homepage/proj1-thumb.jpg" class="rounded">
+                                </picture>                                
                             </a>    
                         </div>
                         <div class="proj-title">
@@ -82,11 +86,15 @@
                 <div class="proj" id="proj-two">
                     <div class="proj-thumb" id="proj-two-thumb">
                         <a href="proj_two.html">
-                            <img src="images/homepage/proj2_thumb.jpg" alt="project 2 thumbnail" class="rounded">
+                            <picture>
+                                <source media="(min-width: 800px)" srcset="images/homepage/proj2_thumb-large.jpg">
+                                <source media="(min-width: 450px)" srcset="images/homepage/proj2_thumb.jpg">       
+                                <img src="images/homepage/proj2_thumb.jpg" alt="project 2 thumbnail" class="rounded">
+                            </picture> 
                         </a>    
                     </div>
                     <div class="proj-title" id="proj-two-title">
-                        <a href="proj_two.html" class="work-title">Hot 97 Redesign</a>    
+                        <a href="proj_two.html" class="work-title">Hot 97 Website Redesign</a>    
                     </div>
                     <div class="proj-description" id="proj-two-description">
                         <p>
@@ -105,7 +113,11 @@
                 <div class="proj" id="proj-three">
                     <div class="proj-thumb">
                         <a href="proj_three.html">
-                            <img src="images/homepage/proj3_thumb.jpeg" alt="project 3 thumbnail" class="rounded">
+                            <picture>
+                                <source media="(min-width: 800px)" srcset="images/homepage/proj3_thumb-large.jpeg">
+                                <source media="(min-width: 450px)" srcset="images/homepage/proj3_thumb.jpeg">       
+                                <img src="images/homepage/proj3_thumb.jpeg" alt="project 3 thumbnail" class="rounded">
+                            </picture> 
                         </a>    
                     </div>
                     <div class="proj-title">
@@ -124,6 +136,31 @@
                         </button>
                     </div>
                 </div>  
+                <div class="proj" id="proj-four">
+                        <div class="proj-thumb" id="proj-two-thumb">
+                            <a href=""> 
+                                <picture>
+                                    <source media="(min-width: 800px)" srcset="images/homepage/proj4_thumb-large.jpeg">
+                                    <source media="(min-width: 450px)" srcset="images/homepage/proj4_thumb.jpg">       
+                                    <img src="images/homepage/proj4_thumb.jpg" alt="project 4 thumbnail" class="rounded">
+                                </picture> 
+                            </a>    
+                        </div>
+                        <div class="proj-title" id="proj-two-title">
+                            <a href="" class="work-title">Interactive Javascript Site</a>    
+                        </div>
+                        <div class="proj-description" id="proj-two-description">
+                            <p>
+                                We were tasked with coding an interactive website using Javascript, CSS and
+                                HTML languages.
+                            </p>
+                        </div>
+                        <div class="proj-button" id="proj-two-button">
+                            <button>
+                                <a href="" class="myButton">View Project</a> 
+                            </button>
+                        </div>
+                    </div>
             </div>
         </div>    
 

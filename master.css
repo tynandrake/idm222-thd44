@@ -23,7 +23,7 @@ button {
     border: none;
     background: none;
 }
-a:hover {
+.menu-items a:hover {
     color: #4E00FD;
     transition: all .5s ease-in-out;
 }
@@ -36,7 +36,6 @@ a:hover {
     left: 0;
     right: 0;
     display: flex;
-    height: 100vh;
     justify-content: space-between;
     padding: 0 1.5rem;
     z-index: 1;
@@ -367,9 +366,6 @@ ul {
 	font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
     padding: 0.75rem 1rem;
 }
-.myButton:hover {
-    filter: invert()
-}
 
 
 
@@ -448,7 +444,7 @@ ul {
 
 
 /* Media query - tablet */
-@media (min-width: 720px) {
+@media (max-width: 1199px) and (min-width: 719px) {
     .menu-btn {
         display: flex;
     }
@@ -486,6 +482,15 @@ ul {
     .fwh {
         max-width: 700px;
     }
+    .fwh-work {
+        max-width: 800px;
+    }
+    img.rounded {
+        border-radius: 1rem;
+    }
+    .work-title {
+        font-size: 1.7rem;
+    }
     .fwh h4 {
         font-size: 1.2rem;
     }
@@ -503,11 +508,23 @@ ul {
     .proj-button {
         display: none;
     }
+
+    /* Project Pages */
+    .proj-fwh {
+        max-width: 700px;
+    }
+    .proj-fwh h1 {
+        font-size: 2.5rem;
+    }
+    /* Resume Page */
+    h1.name {
+        font-size: 3.5rem;
+    }
 }
 
 
 /* Media query - desktop */
-@media (min-width: 1200px) {
+@media (min-width: 1200px) {    
     /* Navbar */
     .navbar {
         padding: 0;
@@ -541,6 +558,9 @@ ul {
         grid-template-columns: repeat(17, minmax(0, 1fr));
         grid-template-rows: repeat(10, minmax(0, 1fr));
         max-height: 100vh;
+    }
+    .fwh-work {
+        max-width: 1100px;
     }
     .fwh h4 {
         font-size: 1.5rem;
@@ -620,6 +640,7 @@ ul {
         font-size: 1.5rem; 
     }
     .proj-button {
+        display: grid;
         grid-column: 2 / span 2;
         grid-row: 11;
     }
@@ -645,6 +666,8 @@ ul {
     }
     #proj-two-thumb {
         grid-column: 1 / span 7;
+        position: relative;
+        right: 100px;
     }
     #proj-two-description {
         grid-column: 8 / span 4;
@@ -670,8 +693,19 @@ ul {
     #proj-three-button a{
         background: #2ea1d6;
     }
+    /* Project Four */
+    #proj-four {
+        background-image: url(images/homepage/proj-four-bg.jpg);
+        background-size: cover;
+    }
+    #proj-four-title {
+        color: #7e92a1 ;
+    }
+    #proj-four-text {
+        color: #252525;
+    }
 
-    /* Project/Resume/About Page Adjustments */
+    /* Project Pages */
     .proj-fwh h1 {
         font-size: 3rem;
         line-height: 3rem;
@@ -679,9 +713,24 @@ ul {
     .proj-fwh , .resume-fwh {
         max-width: 800px;
     }
+    /* Resume Page */
+    h1.name {
+        font-size: 3.5rem;
+    }
+    .resume-list {
+        font-size: 1.2rem;
+    }
+    .resume-bold {
+        line-height: 1.6rem;
+    }
+    .resume-fade {
+        font-size: 1.2rem;
+    }
+    /* About Page */
     #about-portrait {
         float: right;
         margin-top: 3rem;
         width: 20rem;
+        border-radius: 1rem;
     }   
 }
