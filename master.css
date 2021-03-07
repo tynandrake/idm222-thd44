@@ -630,7 +630,6 @@ ul {
         width: 40rem;
     } 
     .proj-description {
-        display: grid;
         color: white;
         grid-column: 2 / span 4;
         grid-row: 5;
@@ -640,7 +639,6 @@ ul {
         font-size: 1.5rem; 
     }
     .proj-button {
-        display: grid;
         grid-column: 2 / span 2;
         grid-row: 11;
     }
