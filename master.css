@@ -641,6 +641,7 @@ ul {
     .proj-button {
         grid-column: 2 / span 2;
         grid-row: 11;
+        -webkit-appearance: none;
     }
     .proj-button a {
         background-color: #4366a5d0;
