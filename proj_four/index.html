@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hip-Hop Zodiac</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <div class="header-input">
+        <div class="container-date">
+            <form id="form-date">
+                <div>
+                    <p><input id="bday" type="date" required></p>
+                    <p><button id="userSubmit">Submit</button></p>
+                </div>    
+            </form>
+        </div>
+        <button class="modal-button" href="#myModal0" id="help-btn">
+        </button>
+        <div id="myModal0" class="modal">
+            <div class="modal-content" id="help-modal-container">
+                <div class="help-modal-content">
+                    <div class="modal-header" id="help-header">
+                        <span class="close">&times;</span>
+                        <h2>Help</h2>
+                    </div>
+                    <div class="modal-body" id="help-body">
+                        <p>Each of the albums on display are linked to a date on the zodiac calendar. Enter your birthday into the submition field 
+                            to discover which album aligns with your birthday.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Albums -->
+    <div class="container">
+        <div class="col">
+    <!-- Miseducation -->
+            <button class="modal-button-album" href="#myModal1" id="miseducation"></button>
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="ex_factor" data-pad="1">
+                        <source src="sounds/ex_factor.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">The Miseducation Of Lauryn Hill</h3>
+                        <h4> Jan 20 - Feb 18</h4>
+                        <img src="images/miseducational_of_laurynhill.jpg" alt="miseducation of lauryn hill cover">
+                        <p>The Miseducation of Lauryn Hill progressively blended neo-soul, R&B, and hip-hop seamlessly, 
+                            resulting in one of the most acclaimed albums of all time.</p>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Blonde -->
+            <button class="modal-button-album" href="#myModal2" id="blonde"></button>
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+    
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="pink_white" data-pad="2">
+                        <source src="sounds/pink_white.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Blonde</h3>
+                        <h4> Feb 19 - Mar 20</h4>
+                        <img src="images/blonde.jpeg" alt="blonde cover">
+                        <p>Blonde is the second studio album by American singer Frank Ocean. It was released on August 20, 2016, 
+                                as a timed exclusive on the iTunes Store and Apple Music.</p>
+                    </div>
+                </div>  
+            </div>
+    <!-- MBDTF -->
+            <button class="modal-button-album" href="#myModal3" id="mbdtf"></button>
+            <!-- The Modal -->
+            <div id="myModal3" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="power" data-pad="3">
+                        <source src="sounds/power.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">My Beautiful Dark Twisted Fantasy</h3>
+                        <h4> Mar 21 - Apr 19</h4>
+                        <img src="images/mbdtf1.jpg" alt="my beautiful dark twisted fantasy cover">
+                        <p>My Beautiful Dark Twisted Fantasy is the fifth studio album by Kanye West. 
+                                It was released on November 22, 2010, by Def Jam Recordings.</p>
+                    </div>
+                </div>  
+            </div>
+    <!-- Blueprint -->
+            <button class="modal-button-album" href="#myModal4" id="blueprint" data-file="u_dont_know"></button>
+            <!-- The Modal -->
+            <div id="myModal4" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="u_dont_know" data-pad="4">
+                        <source src="sounds/u_dont_know.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">The Blueprint</h3>
+                        <h4> Apr 20 - May 20</h4>
+                        <img src="images/bp1.jpg" alt="the blueprint cover">
+                        <p>The Blueprint is the highly-acclaimed sixth studio album by American rapper Jay-Z. It was released on September 11, 2001, 
+                                by Roc-A-Fella Records and Def Jam Recordings.</p>
+                    </div>
+                </div>  
+            </div>  
+        </div>
+
+        <div class="col">
+    <!-- Telefone -->
+            <button class="modal-button-album" href="#myModal5" id="telefone" ></button>
+            <!-- The Modal -->
+            <div id="myModal5" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="diddy_bop" data-pad="5">
+                        <source src="sounds/diddy_bop.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Telefone</h3>
+                        <h4> May 21 - Jun 21</h4>
+                        <img src="images/telefone.jpg" alt="telefone cover">
+                        <p>Telefone is a mixtape by rapper Noname. Originally announced in 2012, the mixtape faced numerous delays 
+                                and was released four years later on July 31, 2016 as a free download.</p>
+                    </div>
+                </div>  
+            </div>
+    <!-- Take Care -->
+            <button class="modal-button-album" href="#myModal6" id="take-care" ></button>
+            <!-- The Modal -->
+            <div id="myModal6" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="headlines" data-pad="6">
+                        <source src="sounds/headlines.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Take Care</h3>
+                        <h4> Jun 22 - Jul 22</h4>
+                        <img src="images/take_care.jpg" alt="take care cover">
+                        <p>Take Care is the second studio album by Canadian rapper Drake. It was released on November 15, 2011 by 
+                                Young Money Entertainment, Cash Money Records and Republic Records.</p>
+                    </div>
+                </div>  
+            </div>
+    <!-- Stankonia -->
+            <button class="modal-button-album" href="#myModal7" id="stankonia" data-file="so_fresh_so_clean"></button>
+            <!-- The Modal -->
+            <div id="myModal7" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="so_fresh_so_clean" data-pad="7">
+                        <source src="sounds/so_fresh_so_clean.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Stankonia</h3>
+                        <h4> Jul 23 - Aug 22</h4>
+                        <img src="images/stankonia.jpg" alt="stankonia cover">
+                        <p>Stankonia is the fourth studio album by American hip hop duo OutKast. It was released on October 31, 
+                            2000, by LaFace Records.</p>
+                    </div>
+                </div>  
+            </div>
+    <!-- Swimming -->
+            <button class="modal-button-album" href="#myModal8" id="swimming" data-file="2009"></button>
+            <!-- The Modal -->
+            <div id="myModal8" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="2009" data-pad="8">
+                        <source src="sounds/2009.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Swimming</h3>
+                        <h4> Aug 23 - Sep 22</h4>
+                        <img src="images/swimming.jpg" alt="swimming  cover">
+                        <p>Swimming is the fifth and final studio album by American rapper and singer Mac Miller. It was released on August 3, 2018 
+                                by REMember Music and Warner Bros. Records.</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="col">
+    <!-- Under Pressure -->
+            <button class="modal-button-album" href="#myModal9" id="under-pressure" data-file="gang_related"></button>
+            <!-- The Modal -->
+            <div id="myModal9" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="gang_related" data-pad="9">
+                        <source src="sounds/gang_related.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Under Pressure</h3>
+                        <h4> Sep 23 - Oct 23</h4>
+                        <img src="images/under_pressure.jpg" alt="under pressure cover">
+                        <p>Under Pressure is the debut studio album by American rapper Logic. It was released on October 21, 2014, by Visionary Music Group and Def Jam Recordings.</p>
+                    </div>
+                </div>  
+            </div>    
+    <!-- Astroworld -->
+            <button class="modal-button-album" href="#myModal10" id="astroworld" ></button>
+            <!-- The Modal -->
+            <div id="myModal10" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="butterfly_effect" data-pad="10">
+                        <source src="sounds/butterfly_effect.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Astroworld</h3>
+                        <h4> Oct 24 - Nov 21</h4>
+                        <img src="images/astroworld.jpg" alt="astroworld cover">
+                        <p>Astroworld is the third studio album by American rapper and record producer Travis Scott. It was released on August 3,
+                        2018, through Cactus Jack Records and Grand Hustle Records, and distributed by Epic Records.</p>
+                    </div>
+                </div>  
+            </div>      
+    <!-- Eternal Atake -->
+            <button class="modal-button-album" href="#myModal11" id="illmatic" ></button>
+            <!-- The Modal -->
+            <div id="myModal11" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="nysom" data-pad="11">
+                        <source src="sounds/nysom.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">Illmatic</h3>
+                        <h4> Nov 22 - Dec 21</h4>
+                        <img src="images/illmatic.jpg" alt="illmatic cover">
+                        <p>Illmatic is the debut studio album by American rapper Nas. It was released on April 19, 1994, by Columbia Records. After
+                        signing with the label with the help of MC Serch, Nas recorded the album in 1992 and 1993 at Chung King Studios, D&D
+                        Recording, Battery Studios, and Unique Recording Studios in New York City.</p>
+                    </div>
+                </div>  
+            </div>   
+    <!-- TPAB -->
+            <button class="modal-button-album" href="#myModal12" id="tpab" data-file="alright"></button>
+            <!-- The Modal -->
+            <div id="myModal12" class="modal">
+            <!-- Modal content -->
+                <div class="modal-content">
+                    <audio preload="auto" id="alright" data-pad="12">
+                        <source src="sounds/alright.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="album-modal-grid">
+                        <span class="close">&times;</span>
+                        <h3 class="title">To Pimp A Butterfly</h3>
+                        <h4> Dec 22 - Jan 19</h4>
+                        <img src="images/tpab.jpg" alt="to pimp a butterfly cover">
+                        <p>To Pimp a Butterfly is the third studio album by rapper Kendrick Lamar. It was released on March 15, 2015, 
+                                by T.D.E, Aftermath Entertainment and Interscope Records.</p>
+                    </div>
+                </div>  
+            </div>           
+        </div>
+
+    <audio src="" id="music-player"></audio>
+    <script src="main.js"></script>
+</body>
+</html>
