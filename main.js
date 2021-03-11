@@ -1,9 +1,11 @@
 const menuBtn = document.querySelector('.menu-btn');
 const navBar = document.querySelector('.nav-menu');
+const activeMenu = document.querySelector('body');
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle("open");
     navBar.classList.toggle("open");
+    activeMenu.classList.toggle("open");
 });
 
 const checkpoint = 300;
