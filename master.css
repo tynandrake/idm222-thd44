@@ -1,8 +1,8 @@
 /* Universal Changes */
 body {
     background-color: #f9fcfc;
-    margin: 0;
-    max-width: 120rem;
+    /* margin: 0;
+    max-width: 120rem; */
 }
 * {
     box-sizing: border-box;
@@ -125,10 +125,7 @@ img.rounded {
     text-decoration: underline;
     text-decoration-color: #4E00FD;
 }
-.myButton:hover{
-    background-color: #4E00FD;
-    transition: 0.3s ease-in-out;
-}
+
 
 /* Fonts */
 @font-face {
@@ -252,19 +249,24 @@ ul {
     margin-bottom: 2rem;
     line-height: 1;
 }
-
+.proj-description {
+    display: none;
+}
+.proj-button {
+    display: none;
+}
 
 /* Project Pages */
 .proj-fwh {
     padding: 2rem;
     margin: auto;
-    max-width: 600px;
     bottom: 0;
 }
 .proj-fwh p{
     /* padding: 1rem; */
     margin-top: 2rem;
     margin-bottom: 2rem;
+    max-width: 600px;
 }
 .proj-fwh h1 {
     text-align: center;
@@ -273,7 +275,6 @@ ul {
 }
 .proj-img {
     display: block;
-    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -360,7 +361,17 @@ ul {
     justify-content: center;
 }
 .button {
+    color:#4E00FD;
     padding: 1rem;
+}
+.button a{
+    color:#4E00FD;
+    background: none;
+    border: 2px solid #4E00FD;
+    padding: 0.5rem 1rem;
+}
+.button a:hover {
+    color:#ffffff;
 }
 .myButton {
 	background-color: #4E00FD;
@@ -370,7 +381,10 @@ ul {
 	font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
     padding: 0.75rem 1rem;
 }
-
+.myButton:hover{
+    background-color: #4E00FD;
+    transition: 0.3s ease-in-out;
+}
 
 
 /* Footer */
@@ -451,17 +465,10 @@ ul {
     img.rounded {
         border-radius: 1rem;
     }
-    .proj-description {
-        display: none;
-    }
-    .proj-button {
-        display: none;
-    }
 }
 
-
 /* Media query - tablet */
-@media (max-width: 1199px) and (min-width: 719px) {
+@media (min-width: 719px) and (max-width: 929px) {
     /* Navbar */
     .menu-btn {
         display: flex;
@@ -521,15 +528,8 @@ ul {
     .fwh h4 {
         font-size: 1.2rem;
     }
-    .proj-description {
-        display: none;
-    }
-    .proj-button {
-        display: none;
-    }
-
     /* Project Pages */
-    .proj-fwh {
+    .proj-fwh p{
         max-width: 700px;
     }
     .proj-fwh h1 {
@@ -540,7 +540,142 @@ ul {
         font-size: 3.5rem;
     }
 }
-
+/* Media query - Mid-desktop */
+@media (min-width: 930px){
+    .fwh {
+        display: grid;
+        align-items: center;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(17, minmax(0, 1fr));
+        grid-template-rows: repeat(10, minmax(0, 1fr));
+        max-height: 100vh;
+        }
+    #hp-name {
+        font-size: 10rem;
+        line-height: 8rem;
+    }
+    #tagline-description {
+        font-size: 1.75rem;
+    }
+    .hp-description {
+        grid-column: 2 / span 6;
+        grid-row: 2 / span 2;
+    }
+    .hp-portrait {
+        grid-column: 12 / span 3;
+        grid-row: 5 / span 2;
+    }
+    .hp-portrait img{
+        display: flex;
+        justify-content: flex-end;
+        max-width: 19rem;
+        border-radius: 1rem;
+    }
+    /* Project Cards */
+    .fwh-work {
+        max-width: 100%;
+    }
+    .proj {
+        border-radius: 2rem;
+        display: grid;
+        max-height: 600px;
+        grid-column-gap: 24px;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-rows: repeat(13, minmax(0, 1fr));
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    .proj-title {
+        grid-column: 2 / span 5;
+        grid-row: 3;
+    }
+    .work-title {
+        font-size: 3rem;
+        margin: 0;
+        text-align: left;
+    } 
+    .proj-thumb {
+        display: flex;
+        align-items: center;
+        grid-column: 6;
+        grid-row: 3 / span 11;
+        margin-left: 6rem;
+    }
+    .proj-thumb img {
+        width: 45rem;
+    }
+    .proj-description {
+        display: block;
+        color: white;
+        grid-column: 2 / span 4;
+        grid-row: 5;
+        margin-top: 2rem;
+    }
+    .proj-description p {
+        font-size: 1.5rem; 
+    }
+    .proj-button {
+        display: block;
+        grid-column: 2 / span 3;
+        grid-row: 12;
+    }
+    .proj-button a {
+        background: none;
+        border: 2px solid white;
+        padding: 0.5rem 1rem;
+    }
+    /* Project One */
+    #proj-one {
+        background: linear-gradient(to right top, #194189 0%, #3B4980 25%, #8738A7 100%);
+    }
+    #proj-one-title {
+        color: #C48CFC;
+    }
+    /* Project Two */
+    #proj-two {
+        background-image: url(images/homepage/proj-two-bg.jpg);
+    }
+    #proj-two-title {
+        grid-column: 7 / span 5;
+        grid-row: 3;
+    }
+    #proj-two-thumb {
+        grid-column: 1 / span 7;
+        position: relative;
+        right: 375px;
+    }
+    #proj-two-description {
+        grid-column: 7 / span 5;
+        grid-row: 5;
+    }
+    #proj-two-button {
+        grid-column: 10 / span 3;
+        grid-row: 11;
+        margin-top: 1.5rem;
+        padding-left: 2rem;
+    }
+    /* Project Three */
+    #proj-three {
+        background-image: url(images/homepage/proj-three-bg-1.jpg);
+        background-size: cover;
+    }
+    #proj-three-title {
+        color: #869fced0 ;
+    }
+    /* Project Four */
+    #proj-four {
+        background-image: url(images/homepage/proj-four-bg.jpg);
+        background-size: cover;
+    }
+    #proj-four-title {
+        color: #7e92a1 ;
+    }
+    #proj-four-text {
+        color: #252525;
+    }
+}
 
 /* Media query - desktop */
 @media (min-width: 1200px) {    
@@ -571,17 +706,6 @@ ul {
     }
     .fwh-container {
         justify-content: center;   
-    }
-    .fwh {
-        display: grid;
-        align-items: center;
-        min-width: 100%;
-        margin: 0;
-        padding: 0;
-        /* grid-column-gap: 24px; */
-        grid-template-columns: repeat(17, minmax(0, 1fr));
-        grid-template-rows: repeat(10, minmax(0, 1fr));
-        max-height: 100vh;
     }
     .fwh-work {
         max-width: 1100px;
@@ -614,7 +738,7 @@ ul {
     .hp-portrait img{
         display: flex;
         justify-content: flex-end;
-        max-width: 20rem;
+        max-width: 23rem;
         border-radius: 1rem;
         top: 30vh;
     }
@@ -723,14 +847,108 @@ ul {
     }
 
     /* Project Pages */
-    .proj-fwh h1 {
-        font-size: 3rem;
-        line-height: 3rem;
+    .proj-fwh {
+        padding: 0;
     }
-    .proj-fwh , .resume-fwh {
-        max-width: 800px;
+
+    /* Project 1 Page */
+    .proj1-article {
+        width: 100%;
+        background-image: url(images/proj1/proj1_background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .proj1-article h1{
+        grid-column:  7 / span 10;
+        grid-row: 3 / span 2;
+        font-size: 3.75rem;
+        line-height: 3rem;
+        padding-top: 2rem;
+    }
+    #proj1-title {
+        color: #D5C3FF;
+    }
+    .proj1-article p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #proj1-thumb {
+        display: flex;
+        margin: 0 auto;
+        width: 48.75rem;
+    }
+    #proj1-cardsort {
+        display: flex;
+        margin: 0 auto;
+        width: 37.5rem;
+    }
+    .proj1-sketch-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #proj1-sketch1 {
+        grid-column: 1;
+    }
+    #proj1-sketch2 {
+        grid-column: 2;
+    }
+    #proj1-sketch3 {
+        grid-column: 3;
+    }
+    .proj1-color-grid {
+        display: grid;
+        grid-template-columns: repeat(23, 1fr);
+        grid-template-rows: repeat(13, 1fr);
+        background-color: #4E00FD;
+    }
+    #proj1-color-p {
+        grid-column: 16 / span 4;
+        grid-row: 3 / span 2;
+        color: #F2F3F2;
+        font-size: 1.5rem;
+    }
+    #proj1-color-scheme1 {
+        grid-column: 4 / span 8;
+        grid-row: 2 / span 6;
+    }
+    #proj1-color-scheme2 {
+        grid-column: 7 / span 8;
+        grid-row: 5 / span 6;
+    }
+    #proj1-color-scheme3 {
+        grid-column: 11 / span 8;
+        grid-row: 8 / span 6;
+    }
+    .proj1-prototyping-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #proj1-prototyping {
+        display: flex;
+        justify-self: center;
+        width: 42rem;
+    }
+    #proj1-prototyping-p{
+        display: flex;
+        justify-self: flex-start;
+        margin: 0;
+    }
+    #proj1-roster {
+        display: flex;
+        width: 41rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
     }
     /* Resume Page */
+    .resume-fwh {
+        max-width: 800px;
+    }
     h1.name {
         font-size: 3.5rem;
     }
