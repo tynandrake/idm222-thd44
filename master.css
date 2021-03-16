@@ -1,8 +1,11 @@
 /* Universal Changes */
 body {
     background-color: #f9fcfc;
-    /* margin: 0;
-    max-width: 120rem; */
+    min-height: 100vh;
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -16,15 +19,14 @@ h1 {
 }
 h1.name{
     font-size: 3rem;
-    margin-top: 6rem;
     margin-bottom: 2rem;   
+    margin-top: 5rem;
 }
 button {
     outline: none;
     border: none;
     background: none;
 }
-
 
 /* Navbar */
 .navbar {
@@ -174,19 +176,12 @@ ul {
     display: flex;
     width: 100%;
     margin: 0;
+    background: url(images/homepage/homepage-background2.svg) no-repeat center;
+    background-size: cover; 
 }
-.fwh {
-    width: 100%;
-    min-height: 100vh;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    max-width: 600px;
-    position: relative;
-    margin: auto;
-}
+
 .hp-description {
-    top: 30vh;
-    position: relative;
+    margin-top: 14rem;
 }
 .hp-portrait img{
     display: none;
@@ -197,8 +192,7 @@ ul {
 }
 #hp-name {
     text-align: left;
-    font-family: 'IBM-Plex-Sans-Bold', 'Gill-Sans-Semibold';
-    font-size: 5rem;
+    font-size: 5.75rem;
     margin: 0;   
     line-height: 5rem; 
 }
@@ -249,12 +243,6 @@ ul {
     margin-bottom: 2rem;
     line-height: 1;
 }
-.proj-description {
-    display: none;
-}
-.proj-button {
-    display: none;
-}
 
 /* Project Pages */
 .proj-fwh {
@@ -290,7 +278,6 @@ ul {
 }
 #secondary-heading {
     font-family: 'Gill-Sans-Semibold', 'Chivo-Bold';
-    padding-top: 2rem;
     padding-bottom: 0;
 }
 .skills img {
@@ -329,7 +316,6 @@ ul {
     padding: 2rem;
     margin: auto;
     max-width: 600px;
-    bottom: 0;
 }
 .resume-fwh p{
     margin-bottom: 2rem;
@@ -363,6 +349,8 @@ ul {
 .button {
     color:#4E00FD;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 .button a{
     color:#4E00FD;
@@ -389,7 +377,6 @@ ul {
 
 /* Footer */
 .footer {
-    /* margin-top: 1rem; */
     display: flex;
     height: 7vh;
     width: 100%;
@@ -428,6 +415,15 @@ ul {
 
 /* Media query - mobile */
 @media (max-width: 719px) {
+    .fwh {
+        width: 100%;
+        min-height: 100vh;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+    }   
     .menu-btn {
         display: flex;
     }
@@ -462,13 +458,26 @@ ul {
         float: right;
         direction: rtl;
     }
+    .proj-description {
+        display: none;
+    }
+    .proj-button {
+        display: none;
+    }
     img.rounded {
         border-radius: 1rem;
+    }
+    /* Resume Page */
+    h1.name {
+        margin-top: 6rem;
+    }
+    #secondary-heading {
+        padding-top: 2rem;
     }
 }
 
 /* Media query - tablet */
-@media (min-width: 719px) and (max-width: 929px) {
+@media (min-width: 719px) and (max-width: 956px) {
     /* Navbar */
     .menu-btn {
         display: flex;
@@ -507,71 +516,18 @@ ul {
     /* Main Elements */
     .fwh {
         max-width: 700px;
-    }
-    #hp-name {
-        font-size: 10rem;
-        line-height: 8rem;
-    }
-    #tagline-description {
-        font-size: 1.75rem;
-    }
-    /* My Work Section */
-    .fwh-work {
-        max-width: 800px;
-    }
-    img.rounded {
-        border-radius: 1rem;
-    }
-    .work-title {
-        font-size: 1.7rem;
-    }
-    .fwh h4 {
-        font-size: 1.2rem;
-    }
-    /* Project Pages */
-    .proj-fwh p{
-        max-width: 700px;
-    }
-    .proj-fwh h1 {
-        font-size: 2.5rem;
-    }
-    /* Resume Page */
-    h1.name {
-        font-size: 3.5rem;
-    }
-}
-/* Media query - Mid-desktop */
-@media (min-width: 930px){
-    .fwh {
-        display: grid;
-        align-items: center;
-        min-width: 100%;
-        margin: 0;
-        padding: 0;
-        grid-template-columns: repeat(17, minmax(0, 1fr));
-        grid-template-rows: repeat(10, minmax(0, 1fr));
-        max-height: 100vh;
-        }
-    #hp-name {
-        font-size: 10rem;
-        line-height: 8rem;
-    }
-    #tagline-description {
-        font-size: 1.75rem;
+        height: 100vh;
     }
     .hp-description {
-        grid-column: 2 / span 6;
-        grid-row: 2 / span 2;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
-    .hp-portrait {
-        grid-column: 12 / span 3;
-        grid-row: 5 / span 2;
+    #hp-name {
+        font-size: 10rem;
+        line-height: 8rem;
     }
-    .hp-portrait img{
-        display: flex;
-        justify-content: flex-end;
-        max-width: 19rem;
-        border-radius: 1rem;
+    #tagline-description {
+        font-size: 1.75rem;
     }
     /* Project Cards */
     .fwh-work {
@@ -580,46 +536,46 @@ ul {
     .proj {
         border-radius: 2rem;
         display: grid;
-        max-height: 600px;
-        grid-column-gap: 24px;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        grid-template-rows: repeat(13, minmax(0, 1fr));
+        max-height: 468px;
+        grid-template-columns: repeat(13, minmax(0, 1fr));
+        grid-template-rows: repeat(12, minmax(0, 1fr));
         overflow: hidden;
         margin-bottom: 3rem;
     }
-    .proj-title {
+    .proj-index-title {
         grid-column: 2 / span 5;
         grid-row: 3;
     }
     .work-title {
-        font-size: 3rem;
+        font-size: 2.25rem;
         margin: 0;
         text-align: left;
-    } 
+        width: 16rem;
+    }
     .proj-thumb {
         display: flex;
         align-items: center;
-        grid-column: 6;
+        grid-column: 7 / span 7;
         grid-row: 3 / span 11;
-        margin-left: 6rem;
     }
     .proj-thumb img {
-        width: 45rem;
+        width: 35rem;
     }
     .proj-description {
         display: block;
         color: white;
         grid-column: 2 / span 4;
         grid-row: 5;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        width: 16rem;
     }
     .proj-description p {
-        font-size: 1.5rem; 
+        font-size: 1.25rem; 
     }
     .proj-button {
         display: block;
         grid-column: 2 / span 3;
-        grid-row: 12;
+        grid-row: 11;
     }
     .proj-button a {
         background: none;
@@ -638,23 +594,21 @@ ul {
         background-image: url(images/homepage/proj-two-bg.jpg);
     }
     #proj-two-title {
-        grid-column: 7 / span 5;
+        grid-column: 9 / span 5;
         grid-row: 3;
     }
     #proj-two-thumb {
-        grid-column: 1 / span 7;
         position: relative;
-        right: 375px;
+        left: -31rem;
     }
     #proj-two-description {
-        grid-column: 7 / span 5;
+        grid-column: 9 / span 5;
         grid-row: 5;
     }
     #proj-two-button {
-        grid-column: 10 / span 3;
+        grid-column: 11 / span 3;
         grid-row: 11;
-        margin-top: 1.5rem;
-        padding-left: 2rem;
+        margin-left: .75rem;
     }
     /* Project Three */
     #proj-three {
@@ -674,11 +628,23 @@ ul {
     }
     #proj-four-text {
         color: #252525;
+    }   
+    /* Project Pages */
+    .proj-fwh p{
+        max-width: 700px;
+    }
+    .proj-fwh h1 {
+        font-size: 2.5rem;
+    }
+    /* Resume Page */
+    h1.name {
+        font-size: 3.5rem;
     }
 }
 
+
 /* Media query - desktop */
-@media (min-width: 1200px) {    
+@media (min-width: 957px) {    
     /* Navbar */
     .navbar {
         padding: 0;
@@ -701,11 +667,17 @@ ul {
         padding: 0.25rem 0.75rem 0.25rem;;
     }
     /* Main Elements */
+    .fwh {
+        height: 100vh;
+        position: relative;
+        right: 3rem;
+        max-width: 50rem;
+    }
     #fwh-gradient{
-        background: #f9fcfc;
+        background-image: linear-gradient(#4E00FD 0%, #f9fcfc 50%);
     }
     .fwh-container {
-        justify-content: center;   
+        justify-content: center;  
     }
     .fwh-work {
         max-width: 1100px;
@@ -714,12 +686,11 @@ ul {
         font-size: 1.5rem;
     }
     .hp-description {
-        grid-column: 4 / span 6;
-        grid-row: 5 / span 2;
+        grid-column: 1;
+
     }
     #hp-name {
         text-align: left;
-        font-family: 'IBM-Plex-Sans-Bold', 'Gill-Sans-Semibold';
         font-size: 11.5rem;
         margin: 0;   
         line-height: 9rem;         
@@ -727,13 +698,13 @@ ul {
     #tagline-description {
         padding-top: 1.5rem;
         font-size: 1.75rem;
-    }
-    .hp-description {
-        top: 0;
+        max-width: 35rem;
     }
     .hp-portrait {
-        grid-column: 12 / span 3;
-        grid-row: 5 / span 2;
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 14rem;
     }
     .hp-portrait img{
         display: flex;
@@ -759,7 +730,7 @@ ul {
         overflow: hidden;
         margin-bottom: 3rem;
     }
-    .proj-title {
+    .proj-index-title {
         grid-column: 2 / span 4;
         grid-row: 3;
     }
@@ -767,13 +738,13 @@ ul {
         font-size: 3rem;
         margin: 0;
         text-align: left;
-    } 
+        width: 22rem;
+    }
     .proj-thumb {
         display: flex;
         align-items: center;
-        grid-column: 6 / span 7;
+        grid-column: 7 / span 7;
         grid-row: 4 / span 11;
-        margin-left: 4rem;
     }
     .proj-thumb img{
         width: 50rem;
@@ -814,14 +785,14 @@ ul {
     #proj-two-thumb {
         grid-column: 1 / span 7;
         position: relative;
-        right: 300px;
+        right: 250px;
     }
     #proj-two-description {
         grid-column: 8 / span 4;
         grid-row: 5;
     }
     #proj-two-button {
-        grid-column: 10 / span 2;
+        grid-column: 10 / span 3;
         grid-row: 11;
         margin-top: 1.5rem;
         padding-left: 2rem;
@@ -850,15 +821,18 @@ ul {
     .proj-fwh {
         padding: 0;
     }
+    .proj-learned {
+        font-size: 3rem;
+    }
 
     /* Project 1 Page */
-    .proj1-article {
+    #proj1-article {
         width: 100%;
         background-image: url(images/proj1/proj1_background.jpg);
         background-size: contain;
         background-repeat: no-repeat;
     }
-    .proj1-article h1{
+    .proj-title {
         grid-column:  7 / span 10;
         grid-row: 3 / span 2;
         font-size: 3.75rem;
@@ -868,18 +842,18 @@ ul {
     #proj1-title {
         color: #D5C3FF;
     }
-    .proj1-article p{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .proj-article p{
         margin: 0 auto;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-    #proj1-thumb {
-        display: flex;
-        margin: 0 auto;
-        width: 48.75rem;
+    #proj1-p1 {
+        margin-top: 4rem;
+    }
+    #proj1-l1 {
+        font-size: 4rem;
+        line-height: 0;
+        margin-top: 2rem;
     }
     #proj1-cardsort {
         display: flex;
@@ -904,6 +878,7 @@ ul {
         grid-template-columns: repeat(23, 1fr);
         grid-template-rows: repeat(13, 1fr);
         background-color: #4E00FD;
+        max-height: 1100px;
     }
     #proj1-color-p {
         grid-column: 16 / span 4;
@@ -937,6 +912,7 @@ ul {
     #proj1-prototyping-p{
         display: flex;
         justify-self: flex-start;
+        align-self: center;
         margin: 0;
     }
     #proj1-roster {
@@ -944,6 +920,138 @@ ul {
         width: 41rem;
         margin: 0 auto;
         margin-bottom: 2rem;
+    }
+    #proj1-learned { 
+        margin-top: 4rem;
+    }
+
+    /* Project 2 Page */
+    #proj2-article {
+        width: 100%;
+        background-image: url(images/proj2/proj2_background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .proj2-breakpoint-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #proj2-breakpoint-initial {
+        display: flex;
+        justify-content: center;
+        grid-column: 1;
+    }
+    #proj2-breakpoint-wireframe {
+        display: flex;
+        justify-content: center;
+        grid-column: 2;
+    }
+    .proj2-sketch-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
+        margin-top: 2rem;
+    }
+    #proj2-sketch-p1 {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #proj2-sketch1 {
+        grid-column: 1;
+        grid-row: 1
+    }
+    #proj2-sketch-p2 {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        grid-column: 1;
+        grid-row: 2
+    }
+    #proj2-sketch2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .proj2-heuristics {
+        margin: 0 auto;
+        width: 50rem;
+    }
+    .proj2-final-images {
+        margin: 0 auto;
+        width: 70rem;
+        margin-bottom: 2rem;
+    }
+    /* Project 3 Page */
+    #proj3-article {
+        width: 100%;
+        background-image: url(images/proj3/proj3_background.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #proj3-title {
+        color: #EAEAEA;
+    }
+    .proj3-appflow {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #proj3-appflow-initial {
+        position: relative;
+        grid-column: 2 / span 3;
+        grid-row: 1 / span 2; 
+        right: 10rem;
+    }
+    #proj3-appflow-redesign {
+        position: relative;
+        grid-column: 2 / span 3; 
+        grid-row: 2 / span 2;
+        left: 10rem; 
+    }
+    .proj3-animation {
+        width: 100%;
+        background-color: #35373E;
+        max-height: 1100px;
+        margin-bottom: 10em;
+    }
+    .proj3-animation p{
+        color: #F2F3F2;
+    }
+    .proj3-aftereffects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #proj3-aftereffects-p1 {
+        display: flex;
+        align-self: center;
+        grid-column: 2;
+    }
+    #proj3-aftereffects-process {
+        padding: 2rem;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #proj3-interaction-prototype {
+        display: flex;
+        margin: 0 auto;
+        width: 47rem;
+        overflow: visible;
+    }
+    #proj3-learned {
+        margin-top: 20rem;
+    }
+    .proj3-final-prototypes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }
+    #proj3-final1 {
+        grid-column: 1;
+    }
+    #proj3-final2 {
+        grid-column: 2;
     }
     /* Resume Page */
     .resume-fwh {
@@ -964,8 +1072,7 @@ ul {
     /* About Page */
     #about-portrait {
         float: right;
-        margin-top: 3rem;
-        width: 20rem;
+        width: 22rem;
         border-radius: 1rem;
     }   
 }
