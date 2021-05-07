@@ -176,6 +176,9 @@ ul {
     display: flex;
     width: 100%;
     margin: 0;
+    background: url(images/homepage/homepage-background2.svg) no-repeat;
+    background-position: center -15vh;
+    background-size: cover;
 }
 
 .hp-description {
@@ -201,9 +204,9 @@ ul {
     margin-top: 1rem;
 }
 .my_work {
-    top: 87vh;
+    top: 90vh;
     position: absolute;
-    color: white;
+    color: #4E00FD;
     font-family: 'Gill-Sans-Regular';
     font-size: 1.5rem;
     width: 100%;
@@ -214,7 +217,6 @@ ul {
 #arrow-icon {
     height: 2rem;
     width: 100%;
-    filter: invert(1);
     margin-top: .5rem;
 }
 .fwh-work {
@@ -755,11 +757,11 @@ ul {
     .fwh {
         height: 100vh;
         position: relative;
-        right: 3rem;
         max-width: 50rem;
+        text-align: center;
     }
     #fwh-gradient{
-        background-image: linear-gradient(#4E00FD 0%, #f9fcfc 50%);
+        background-image: none;
     }
     .fwh-container {
         justify-content: center;  
@@ -768,18 +770,22 @@ ul {
         max-width: 1100px;
     }
     .fwh h4 {
-        font-size: 1.5rem;
+        font-size: 2.5vh;
+        color: white;
+        margin-top: 2rem;
     }
     #hp-name {
         text-align: left;
-        font-size: 11.5rem;
+        font-size: 20vh;
         margin: 0;   
-        line-height: 9rem;         
+        line-height: 16vh;   
+        color: white;      
     }
     #tagline-description {
         padding-top: 1.5rem;
-        font-size: 1.75rem;
-        max-width: 35rem;
+        font-size: 2.5vh;
+        max-width: 48vh;
+        color: white;
     }
     .hp-portrait {
         grid-column: 2;
