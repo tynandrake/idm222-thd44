@@ -1,6 +1,6 @@
 /* Universal Changes */
 body {
-    background-color: #f9fcfc;
+    background-color: #f7f3f3;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -177,73 +177,66 @@ ul {
     display: flex;
     width: 100%;
     margin: 0;
-    background: linear-gradient(75.98deg, #4E00FD 7.16%, #9E00FF 89.5%);
-    height: 85vh;
-    border-bottom-left-radius: 226%;
-    border-bottom-right-radius: 226%;
+    background: conic-gradient(from 0deg at 50% 50%, #35373E 0deg, #4E00FD 360deg);
+    height: 100vh;
     position: relative;
+    justify-content: center;
     margin-bottom: 15vh;
 }
-.fwh-name h2:first-child {
-  display: flex;
-  justify-content: flex-start;
-  width: 85%;
-}
-.fwh-name h2:last-child {
-  display: flex;
-  justify-content: flex-end;
-  width: 95%;
-  position: absolute;
-}
-.fwh-name {
-    font-family: 'Gill-Sans-Regular','IBM-Plex-Sans-Regular', 'Open-Sans-Regular';
-    color: white;
-    font-size: 1.5rem;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: 65%;
-    position: absolute;
-    text-align: center;
+.tab-container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
     display: flex;
- }
-.hp-description {
-    margin-top: 2vh;
+    align-items: center;
+    margin-bottom: 4rem;
 }
-.hp-portrait img{
-    display: none;
+.tab {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    stroke: white;
+    display: flex;
+    justify-content: center;
 }
-.fwh h4 {
-    font-family: 'Gill-Sans-Regular','IBM-Plex-Sans-Regular', 'Open-Sans-Regular';
-    margin-bottom: 0;
-}
-#hp-name {
-    text-align: left;
-    font-size: 5.75rem;
-    margin: 0;   
-    line-height: 5rem; 
-}
-#tagline-description {
-    font-family: 'Gill-Sans-Semibold', 'IBM-Plex-Sans-Bold', 'Chivo-Bold';
-    font-size: 1.5rem;
-    color: #252525;
-    margin-top: 1rem;
-}
-.my_work {
-    top: 90vh;
+.tab-outline {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    stroke: white;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    color: #4E00FD;
-    font-family: 'Gill-Sans-Regular';
-    font-size: 1.5rem;
-    width: 100%;
 }
-.my_work h5 {
-    text-align: center;
+.tab-outline:nth-last-child(5){
+    margin-top: 15px;
 }
-#arrow-icon {
-    height: 2rem;
-    width: 100%;
-    margin-top: .5rem;
+.tab-outline:nth-last-child(4){
+    margin-top: 30px;
+}
+.tab-outline:nth-last-child(3){
+    margin-top: 45px;
+}
+.tab-outline:nth-last-child(2){
+    margin-top: 60px;
+}
+.tab-outline:nth-last-child(1){
+    margin-top: 75px;
+}
+.my-work {
+    font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular';
+    color: white;
+    position: absolute;
+    top: 90vh;
+}
+.arrow {
+    width: 2.25rem;
+    position: absolute;
+    top: 95vh;
+}
+#fwh-gradient{
+    display: flex;
+    justify-content: center;
 }
 .fwh-work {
     padding: 1.5rem;
@@ -252,11 +245,6 @@ ul {
     margin: 0;
     display: flex;
     justify-content: center;
-}
-#fwh-gradient {
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(#4E00FD , #DE0AFD);
 }
 .work-title {
     font-family: 'Gill-Sans-Semibold', 'Chivo-Bold';
@@ -462,15 +450,6 @@ ul {
 
 /* Media query - mobile */
 @media (max-width: 719px) {
-    .fwh {
-        width: 100%;
-        min-height: 100vh;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        max-width: 600px;
-        position: relative;
-        margin: auto;
-    }   
     .menu-btn {
         display: flex;
     }
@@ -513,6 +492,9 @@ ul {
     }
     img.rounded {
         border-radius: 1rem;
+    }
+    .proj-index-title a{
+        color: #4E00FD;
     }
     /* Resume Page */
     #secondary-heading {
@@ -568,25 +550,7 @@ ul {
         direction: rtl;
     }
     /* Main Elements */
-    .fwh {
-        max-width: 700px;
-        height: 100vh;
-    }
-    .hp-description {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    #hp-name {
-        font-size: 10rem;
-        line-height: 8rem;
-    }
-    #tagline-description {
-        font-size: 1.75rem;
-    }
-    /* Project Cards */
-    .fwh-work {
-        max-width: 100%;
-    }
+    
     .proj {
         border-radius: 2rem;
         display: grid;
@@ -752,26 +716,6 @@ ul {
         font-size: 1.25rem; 
         position: relative;  
     } 
-    .menu-items a:hover {
-        color: #4E00FD;
-        transition: all .5s ease-in-out;
-    }
-    .menu-items a::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 8px;
-        left: 0;
-        background-color: #4E00FD;
-        visibility: hidden;
-        transform: scaleX(0);
-        transition: all 0.5s ease-in-out 0s;
-    }
-    .menu-items a:hover::before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
     .nav-menu {
         padding-right: 3rem;
         margin-top: 2rem;
@@ -780,56 +724,10 @@ ul {
         padding: 0.25rem 0.75rem 0.25rem;;
     }
     /* Main Elements */
-    .fwh {
-        height: 100vh;
-        position: relative;
-        max-width: 50rem;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    #fwh-gradient{
-        background-image: none;
-    }
-    .fwh-container {
-        justify-content: center;  
-    }
     .fwh-work {
         max-width: 1100px;
     }
-    .fwh h4 {
-        font-size: 2.5vh;
-        color: white;
-        margin-top: 2rem;
-    }
-    #hp-name {
-        text-align: left;
-        font-size: 20vh;
-        margin: 0;   
-        line-height: 16vh;   
-        color: white;      
-    }
-    #tagline-description {
-        padding-top: 1.5rem;
-        font-size: 2.5vh;
-        max-width: 48vh;
-        color: white;
-    }
-    .hp-portrait {
-        grid-column: 2;
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 14rem;
-    }
-    .hp-portrait img{
-        display: flex;
-        justify-content: flex-end;
-        max-width: 23rem;
-        border-radius: 1rem;
-        top: 30vh;
-    }
+    
     /* My Work Section */
 
     /* Card Styling */
