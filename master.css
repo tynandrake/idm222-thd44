@@ -11,6 +11,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 h1 {
     color: #4E00FD;
     font-family: 'IBM-Plex-Sans-Bold', 'Gill-Sans-Semibold';
@@ -44,6 +47,25 @@ button {
     font-family: 'Gill-Sans-Regular';
     display: flex;
     flex-direction: row;
+}
+.menu-items a:hover {
+    color: white;
+}
+.menu-items a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 8px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.menu-items a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 .logo img{
     width: 3.5rem;
@@ -79,7 +101,7 @@ button {
     width: 1.75rem;
     height: 3px;
     border-radius: 30px;
-    background-color: #4E00FD;
+    background-color: #d5d5d5;
     transition: all 0.5s ease-in-out;
 }
 .menu-btn_burger::before,
@@ -112,6 +134,7 @@ button {
 a {
     color: white;
     text-decoration: none;
+    position: relative;
 }
 a:active {
     color: black;
@@ -125,8 +148,10 @@ img.rounded {
 }
 .active {
     text-decoration: underline;
-    text-decoration-color: #4E00FD;
+    text-decoration-color: white;
 }
+
+
 
 
 /* Fonts */
@@ -183,6 +208,10 @@ ul {
     position: relative;
     justify-content: center;
     margin-bottom: 15vh;
+}
+.fwh-container a:hover #arrow-hover {
+    stroke: #6232E0;
+    transition: .5s;
 }
 .name-container {
     opacity: 0;
@@ -247,17 +276,13 @@ ul {
 .tab-outline:nth-last-child(1){
     animation: .7s ease-in-out 1.5s forwards slideDown4;
 }
-
-.my-work {
-    font-family: 'Gill-Sans-Regular', 'IBM-Plex-Sans-Regular', 'Open-Sans-Regular';
-    color: white;
-    position: absolute;
-    top: 90vh;
-}
 .arrow {
     width: 2.25rem;
     position: absolute;
+    stroke: white;
     top: 95vh;
+    right: 50%;
+    transform: translateX(50%);
 }
 #fwh-gradient{
     display: flex;
@@ -524,7 +549,7 @@ ul {
         border-radius: 1rem;
     }
     .proj-index-title a{
-        color: #4E00FD;
+        color: #d5d5d5;
     }
     /* Resume Page */
     #secondary-heading {
