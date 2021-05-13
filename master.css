@@ -324,6 +324,9 @@ ul {
 
 
 /* About Me Page */
+.skills {
+    color: #d5d5d5;
+}
 .skills ul {
     list-style-type: none;
     line-height: 3rem;
@@ -378,6 +381,7 @@ ul {
 .resume-section-title{
     font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
     font-size: 1.25rem;
+    color: rgb(255, 239, 170);
 }
 .resume-list {
     list-style: none;   
@@ -385,14 +389,16 @@ ul {
     margin-top: 1rem;  
     margin-bottom: 1rem; 
     padding-left: 1.5rem;
+    color: rgb(230, 230, 230);
 }
 .resume-bold {
     font-family: 'Gill-Sans-Semibold', 'Chivo-Bold'; 
+    color: rgb(235, 235, 235);
 }
 .resume-fade {
     font-size: 1rem;
     display: inline; 
-    color: #6c6e70;   
+    color: #747677;   
 }
 .resume-desc {
     list-style: circle;
@@ -469,7 +475,6 @@ ul {
     display: flex;
     width: 100%;
 }
-
 
 
 
@@ -788,6 +793,8 @@ ul {
         align-items: center;
         grid-column: 7 / span 7;
         grid-row: 4 / span 11;
+        opacity: 0;
+        animation: .7s ease-in-out .3s forwards slideUp;
     }
     .proj-thumb img{
         width: 50rem;
@@ -879,6 +886,8 @@ ul {
         font-size: 3.75rem;
         line-height: 3rem;
         padding-top: 3rem;
+        opacity: 0;
+        animation: .7s ease-in-out .2s forwards slideUp;
     }
     #proj1-title {
         color: #D5C3FF;
