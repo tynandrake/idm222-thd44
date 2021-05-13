@@ -8,17 +8,17 @@ menuBtn.addEventListener('click', () => {
     activeMenu.classList.toggle("open");
 });
 
-const checkpoint = 300;
+// const checkpoint = 300;
  
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= checkpoint) {
-    opacity = 1 - currentScroll / checkpoint;
-  } else {
-    opacity = 0;
-  }
-  document.querySelector(".fwh").style.opacity = opacity;
-});
+// window.addEventListener("scroll", () => {
+//   const currentScroll = window.pageYOffset;
+//   if (currentScroll <= checkpoint) {
+//     opacity = 1 - currentScroll / checkpoint;
+//   } else {
+//     opacity = 0;
+//   }
+//   document.querySelector(".fwh-container").style.opacity = opacity;
+// });
 
 window.addEventListener("scroll", reveal);
   function reveal() {
@@ -34,3 +34,5 @@ window.addEventListener("scroll", reveal);
       }
     }
   }
+  
+
