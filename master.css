@@ -209,6 +209,11 @@ ul {
     justify-content: center;
     margin-bottom: 15vh;
 }
+.fwh-container a {
+    background-color: transparent;
+    position: absolute;
+    top: 95vh;
+}
 .fwh-container a:hover #arrow-hover {
     stroke: #6232E0;
     transition: .5s;
@@ -278,11 +283,7 @@ ul {
 }
 .arrow {
     width: 2.25rem;
-    position: absolute;
     stroke: white;
-    top: 95vh;
-    right: 50%;
-    transform: translateX(50%);
 }
 #fwh-gradient{
     display: flex;
